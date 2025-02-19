@@ -3,6 +3,7 @@ import Logo from "./assets/imgs/logo.png";
 import Pokeball from "/imgs/pokeball.png";
 import FilterBar from "./components/FilterBar.jsx";
 import Loader from "./components/Loader.jsx";
+import Footer from "./components/Footer.jsx";
 
 const typeColors = {
   normal: { color: "#B3B3B3", fr: "Normal" },
@@ -218,6 +219,7 @@ function App() {
         ))
         }
       </div>
+      <Footer/>
     </div>
   ); 
 }
