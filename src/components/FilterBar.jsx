@@ -57,7 +57,7 @@ const FilterBar = ({ selectedRegion, selectedType, onRegionChange, onTypeChange 
                 {Object.entries(regions).map(([region, _]) => (
                 <button
                     key={region} // Clé unique avec le nom de la région
-                    className={` px-1 py-2 md:px-4 md:py-2 md:text-xs text-2xs  rounded-lg text-black border-2 border-blue-800  shadow-black shadow-sm ${selectedRegion === region ? "bg-yellow-400 text-blue-800" : "bg-white"}`}
+                    className={` px-1 py-2 md:px-4 md:py-2 md:text-xs text-2xs rounded-lg text-black border-2 border-blue-800  shadow-black shadow-sm cursor-pointer ${selectedRegion === region ? "bg-yellow-400 text-blue-800" : "bg-white"}`}
                     onClick={() => onRegionChange(region)}
                 >
                     {region}
@@ -70,9 +70,7 @@ const FilterBar = ({ selectedRegion, selectedType, onRegionChange, onTypeChange 
                 {Object.entries(typeColors).map(([type, data]) => (
                 <button
                     key={type} // Clé unique avec le nom du type
-                    className={`flex items-center justify-center rounded-full w-10 h-10 my-2 border-2 border-gray-100 ${
-                    selectedType.includes(type) ? "scale-80" : "shadow-black shadow-md "
-                    }`}
+                    className={`flex items-center justify-center rounded-full w-10 h-10 my-2 border-2 border-gray-100 cursor-pointer ${selectedType.includes(type) ? "scale-80" : "shadow-black shadow-md "}`}
                     style={{ backgroundColor: data.color }}
                     onClick={() => onTypeChange(type) }
                 >
